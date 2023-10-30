@@ -25,17 +25,6 @@
    descr @title : 'Description';
  }
 
- //### BEGIN OF INSERT
- annotate rm.BusinessPartners with {
-   BusinessPartner @(
-     UI.Hidden,
-     Common : {Text : LastName}
-   );
-   LastName @title : 'Last Name';
-   FirstName @title : 'First Name';
- }
- //### END OF INSERT
-
 annotate rm.Risks with {
    miti @(Common : {
      //show text, not id for mitigation in the context of risks
