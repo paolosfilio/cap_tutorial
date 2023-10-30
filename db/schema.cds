@@ -9,7 +9,6 @@ namespace riskmanagement;
  descr : String;
  miti : Association to Mitigations;
  impact : Integer;
- bp : Association to BusinessPartners;
  // You will need this definition in a later step
  criticality : Integer;
  }
@@ -22,12 +21,3 @@ namespace riskmanagement;
  risks : Association to many Risks on risks.miti = $self;
  }
  
-// using an external service from S/4
-using { API_BUSINESS_PARTNER as external } from '../srv/external/API_BUSINESS_PARTNER.csn';
-
-entity BusinessPartners as projection on external.A_BusinessPartner {
-   key BusinessPartner,
-   LastName, 
-   FirstName,
-    
-} 
